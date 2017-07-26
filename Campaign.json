@@ -1,0 +1,1506 @@
+
+{ 
+    "Use_Defaults": 1,
+    "Campaign_Name": "South Africa baseline",
+    "Events": [ 
+        { 
+            "Event_Name": "PreDOTS",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 1,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Demographic_Coverage": 1,
+                    "Duration": 45260,
+                    "Trigger_Condition": "TBTestPositive",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 1,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "AntiTBConfigurableDrug",
+                            "Cost_To_Consumer": 90,
+                            "Enable_State_Specific_Treatment": 0,
+                            "Drug_Type_By_Property": "PREDOTS",
+                            "Durability_Profile": "FIXED_DURATION_CONSTANT_EFFECT",
+                            "Remaining_Doses": 1
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "DOTSHQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Demographic_Coverage": 1,
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Trigger_Condition": "TBTestPositive",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 1,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "AntiTBConfigurableDrug",
+                            "Cost_To_Consumer": 90,
+                            "Enable_State_Specific_Treatment": 1,
+                            "Drug_Type_By_Property": "DOTSHQ",
+                            "Durability_Profile": "FIXED_DURATION_CONSTANT_EFFECT",
+                            "Remaining_Doses": 1
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "DOTSLQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Demographic_Coverage": 1,
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Trigger_Condition": "TBTestPositive",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 1,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "AntiTBConfigurableDrug",
+                            "Cost_To_Consumer": 90,
+                            "Enable_State_Specific_Treatment": 1,
+                            "Drug_Type_By_Property": "DOTSLQ",
+                            "Durability_Profile": "FIXED_DURATION_CONSTANT_EFFECT",
+                            "Remaining_Doses": 1
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "DOTSensitiveHQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Demographic_Coverage": 1,
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Trigger_Condition": "TBMDRTestNegative",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 1,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "AntiTBConfigurableDrug",
+                            "Cost_To_Consumer": 90,
+                            "Enable_State_Specific_Treatment": 1,
+                            "Drug_Type_By_Property": "DOTSHQ",
+                            "Durability_Profile": "FIXED_DURATION_CONSTANT_EFFECT",
+                            "Remaining_Doses": 1
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "DOTSSensitiveLQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Demographic_Coverage": 1,
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Trigger_Condition": "TBMDRTestNegative",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 1,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "AntiTBConfigurableDrug",
+                            "Cost_To_Consumer": 90,
+                            "Enable_State_Specific_Treatment": 1,
+                            "Drug_Type_By_Property": "DOTSLQ",
+                            "Durability_Profile": "FIXED_DURATION_CONSTANT_EFFECT",
+                            "Remaining_Doses": 1
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "DOTSMDRHQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Demographic_Coverage": 1,
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Trigger_Condition": "TBMDRTestPositive",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 1,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "AntiTBConfigurableDrug",
+                            "Cost_To_Consumer": 90,
+                            "Enable_State_Specific_Treatment": 1,
+                            "Drug_Type_By_Property": "DOTSMDRHQ",
+                            "Durability_Profile": "FIXED_DURATION_CONSTANT_EFFECT",
+                            "Remaining_Doses": 1
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "DOTSMDRLQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Demographic_Coverage": 1,
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Trigger_Condition": "TBMDRTestPositive",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 1,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "AntiTBConfigurableDrug",
+                            "Cost_To_Consumer": 90,
+                            "Enable_State_Specific_Treatment": 1,
+                            "Drug_Type_By_Property": "DOTSMDRLQ",
+                            "Durability_Profile": "FIXED_DURATION_CONSTANT_EFFECT",
+                            "Remaining_Doses": 1
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seed TB epidemic",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 1,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Demographic_Coverage": 0.02,
+                "Number_Distributions": -1,
+                "Number_Repetitions": 11,
+                "Target_Age_Max": 100,
+                "Target_Age_Min": 10,
+                "Target_Group": "Everyone",
+                "Time_Offset": 0,
+                "Timesteps_Between_Repetitions": 12,
+                "Intervention_Config": 
+                { 
+                    "class": "OutbreakIndividualHIVorTB",
+                    "Antigen": 0,
+                    "Genome": 0,
+                    "Infection_Type": "TB",
+                    "Outbreak_Source": "PrevalenceIncrease"
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Monthly HIV incidence",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 39055,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "GroupInterventionDistributionEventCoordinatorHIV",
+                "Demographic_Coverage": 1,
+                "Number_Distributions": -1,
+                "Number_Repetitions": 10000,
+                "Target_Group": "Everyone",
+                "Target_Gender": "All",
+                "Time_Offset": 39054,
+                "Timesteps_Between_Repetitions": 1,
+                "Intervention_Config": 
+                { 
+                    "class": "OutbreakIndividualHIVorTB",
+                    "Antigen": 0,
+                    "Genome": 0,
+                    "Infection_Type": "HIV",
+                    "Outbreak_Source": "PrevalenceIncrease"
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "HIV Testing",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 47448,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Demographic_Coverage": 0.80000000000000004,
+                "Number_Repetitions": 1000,
+                "Target_Demographic": "Everyone",
+                "Timesteps_Between_Repetitions": 12,
+                "Intervention_Config": 
+                { 
+                    "class": "FirstHIVDiagnostic",
+                    "Base_Sensitivity": 0.98999999999999999,
+                    "Base_Specificity": 1,
+                    "Cost_To_Consumer": 1,
+                    "Days_To_Diagnosis": 0,
+                    "Treatment_Fraction": 1,
+                    "CD4_Threshold": 350,
+                    "Positive_Diagnosis_Config_Event": "HIVTestPositive"
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "ART",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 47450,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Demographic_Coverage": 1,
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [],
+                    "Trigger_Condition": "HIVTestPositive",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0013500000000000001,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "ARTBasic",
+                            "Drug_Type": "ART",
+                            "HIV_Drug_Clearance_Rate": 0,
+                            "HIV_Drug_Inactivation_Rate": 0
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek Pre-DOTS Activation LQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 1,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Demographic_Coverage": 1,
+                "Number_Distributions": -1,
+                "Number_Repetitions": -1,
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": 45260,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Trigger_Condition": "TBActivation",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0023500000000000001,
+                        "Single_Use": 1,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "DiagnosticTreatNegSmearPlusMinus",
+                            "Base_Sensitivity": 0.69999999999999996,
+                            "Base_Specificity": 1,
+                            "Base_Sensitivity_Smear_Neg": 0.20000000000000001,
+                            "Base_Specificity_Smear_Neg": 1,
+                            "Cost_to_Consumer": 0,
+                            "Days_to_Diagnosis": -1,
+                            "Treatment_Fraction": 0.20000000000000001,
+                            "Positive_Diagnosis_Config_Event": "TBTestPositive",
+                            "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                            "Defaulters_Config_Event": "TBTestDefault"
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek Pre-DOTS Activation HQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 1,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Demographic_Coverage": 1,
+                "Number_Distributions": -1,
+                "Number_Repetitions": -1,
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": 45260,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Trigger_Condition": "TBActivation",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0055999999999999999,
+                        "Single_Use": 1,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "DiagnosticTreatNegSmearPlusMinus",
+                            "Base_Sensitivity": 1,
+                            "Base_Specificity": 1,
+                            "Base_Sensitivity_Smear_Neg": 0.39000000000000001,
+                            "Base_Specificity_Smear_Neg": 1,
+                            "Cost_to_Consumer": 0,
+                            "Days_to_Diagnosis": -1,
+                            "Treatment_Fraction": 0.5,
+                            "Positive_Diagnosis_Config_Event": "TBTestPositive",
+                            "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                            "Defaulters_Config_Event": "TBTestDefault"
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek DOTS Activation HQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Trigger_Condition": "TBActivation",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0083000000000000001,
+                        "Actual_IndividualIntervention_Config_Event": "ProviderOrdersTBTest"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek DOTS Activation LQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Trigger_Condition": "TBActivation",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0023500000000000001,
+                        "Actual_IndividualIntervention_Config_Event": "ProviderOrdersTBTest"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek Pre-DOTS TBTestDefault HQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 1,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": 45260,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Trigger_Condition": "TBTestDefault",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0027000000000000001,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "DiagnosticTreatNegSmearPlusMinus",
+                            "Base_Sensitivity": 1,
+                            "Base_Sensitivity_Smear_Neg": 0.39000000000000001,
+                            "Base_Specificity": 1,
+                            "Base_Specificity_Smear_Neg": 1,
+                            "Cost_to_Consumer": 0,
+                            "Days_to_Diagnosis": -1,
+                            "Treatment_Fraction": 0.5,
+                            "Positive_Diagnosis_Config_Event": "TBTestPositive",
+                            "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                            "Defaulters_Config_Event": "TBTestDefault"
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek Pre-DOTS TBTestDefault LQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 1,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": 45260,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Trigger_Condition": "TBTestDefault",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.00091323999999999995,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "DiagnosticTreatNegSmearPlusMinus",
+                            "Base_Sensitivity": 0.69999999999999996,
+                            "Base_Sensitivity_Smear_Neg": 0.39000000000000001,
+                            "Base_Specificity": 1,
+                            "Base_Specificity_Smear_Neg": 1,
+                            "Cost_to_Consumer": 0,
+                            "Days_to_Diagnosis": -1,
+                            "Treatment_Fraction": 0.20000000000000001,
+                            "Positive_Diagnosis_Config_Event": "TBTestPositive",
+                            "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                            "Defaulters_Config_Event": "TBTestDefault"
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek Pre-DOTS TBTestNegative HQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 1,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": 45260,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Trigger_Condition": "TBTestNegative",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0054999999999999997,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "DiagnosticTreatNegSmearPlusMinus",
+                            "Base_Sensitivity": 1,
+                            "Base_Sensitivity_Smear_Neg": 0.39000000000000001,
+                            "Base_Specificity": 1,
+                            "Base_Specificity_Smear_Neg": 1,
+                            "Cost_to_Consumer": 0,
+                            "Days_to_Diagnosis": -1,
+                            "Treatment_Fraction": 0.5,
+                            "Positive_Diagnosis_Config_Event": "TBTestPositive",
+                            "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                            "Defaulters_Config_Event": "TBTestDefault"
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek Pre-DOTS TBTestNegative LQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 1,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": 45260,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Trigger_Condition": "TBTestNegative",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0023500000000000001,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "DiagnosticTreatNegSmearPlusMinus",
+                            "Base_Sensitivity": 0.69999999999999996,
+                            "Base_Sensitivity_Smear_Neg": 0.39000000000000001,
+                            "Base_Specificity": 1,
+                            "Base_Specificity_Smear_Neg": 1,
+                            "Cost_to_Consumer": 0,
+                            "Days_to_Diagnosis": -1,
+                            "Treatment_Fraction": 0.20000000000000001,
+                            "Positive_Diagnosis_Config_Event": "TBTestPositive",
+                            "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                            "Defaulters_Config_Event": "TBTestDefault"
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek Pre-DOTS Failure LQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 1,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": 45260,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Trigger_Condition": "TBFailedDrugRegimen",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.00091323999999999995,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "DiagnosticTreatNegSmearPlusMinus",
+                            "Base_Sensitivity": 0.69999999999999996,
+                            "Base_Sensitivity_Smear_Neg": 0.39000000000000001,
+                            "Base_Specificity_Smear_Neg": 1,
+                            "Base_Specificity": 1,
+                            "Cost_to_Consumer": 0,
+                            "Days_to_Diagnosis": -1,
+                            "Treatment_Fraction": 0.20000000000000001,
+                            "Positive_Diagnosis_Config_Event": "TBTestPositive",
+                            "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                            "Defaulters_Config_Event": "TBTestDefault"
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek Pre-DOTS Failure HQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 1,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": 45260,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Trigger_Condition": "TBFailedDrugRegimen",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0054999999999999997,
+                        "Actual_IndividualIntervention_Config": 
+                        { 
+                            "class": "DiagnosticTreatNegSmearPlusMinus",
+                            "Base_Sensitivity": 1,
+                            "Base_Sensitivity_Smear_Neg": 0.39000000000000001,
+                            "Base_Specificity_Smear_Neg": 1,
+                            "Base_Specificity": 1,
+                            "Cost_to_Consumer": 0,
+                            "Days_to_Diagnosis": -1,
+                            "Treatment_Fraction": 0.5,
+                            "Positive_Diagnosis_Config_Event": "TBTestPositive",
+                            "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                            "Defaulters_Config_Event": "TBTestDefault"
+                        }
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek DOTS Failure LQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Trigger_Condition": "TBFailedDrugRegimen",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.00091323999999999995,
+                        "Actual_IndividualIntervention_Config_Event": "ProviderOrdersTBTest"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek DOTS Failure HQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Trigger_Condition": "TBFailedDrugRegimen",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0083000000000000001,
+                        "Actual_IndividualIntervention_Config_Event": "ProviderOrdersTBTest"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek DOTS Negative LQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Trigger_Condition": "TBTestNegative",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0027397260273972603,
+                        "Actual_IndividualIntervention_Config_Event": "ProviderOrdersTBTest"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek DOTS Negative HQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Trigger_Condition": "TBTestNegative",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0083000000000000001,
+                        "Actual_IndividualIntervention_Config_Event": "ProviderOrdersTBTest"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek DOTS Default LQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Trigger_Condition": "TBTestDefault",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0023500000000000001,
+                        "Actual_IndividualIntervention_Config_Event": "ProviderOrdersTBTest"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Seek DOTS Default HQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Trigger_Condition": "TBTestDefault",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0027000000000000001,
+                        "Actual_IndividualIntervention_Config_Event": "ProviderOrdersTBTest"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Testing Ramp Post-Apartheid HQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Demographic_Coverage": 1,
+                "Include_Arrivals": 0,
+                "Include_Departures": 0,
+                "Number_Distributions": -1,
+                "Number_Repetitions": 1,
+                "Property_Restrictions": [],
+                "Target_Demographic": "Everyone",
+                "Timesteps_Between_Repetitions": -1,
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIVScaleUpSwitch",
+                    "Trigger_Condition": "ProviderOrdersTBTest",
+                    "Demographic_Coverage": 1,
+                    "Duration": 3530,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Demographic_Coverage_Time_Profile": "Linear",
+                    "Initial_Demographic_Coverage": 0,
+                    "Primary_Time_Constant": 3530,
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "DiagnosticTreatNegSmearPlusMinus",
+                        "Base_Sensitivity": 1,
+                        "Base_Specificity": 1,
+                        "Base_Sensitivity_Smear_Neg": 0.38,
+                        "Base_Specificity_Smear_Neg": 1,
+                        "Cost_To_Consumer": 1,
+                        "Days_To_Diagnosis": 0,
+                        "Treatment_Fraction": 0.82999999999999996,
+                        "Positive_Diagnosis_Config_Event": "ProviderOrdersMDRTestPreXPERT",
+                        "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                        "Defaulters_Config_Event": "TBTestDefault"
+                    },
+                    "Not_Covered_IndividualIntervention_Configs": [ 
+                        { 
+                            "class": "DiagnosticTreatNegSmearPlusMinus",
+                            "Base_Sensitivity": 1,
+                            "Base_Specificity": 1,
+                            "Base_Sensitivity_Smear_Neg": 0.38,
+                            "Base_Specificity_Smear_Neg": 1,
+                            "Cost_To_Consumer": 1,
+                            "Days_To_Diagnosis": 0,
+                            "Treatment_Fraction": 0.59999999999999998,
+                            "Positive_Diagnosis_Config_Event": "ProviderOrdersMDRTestPreXPERT",
+                            "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                            "Defaulters_Config_Event": "TBTestDefault"
+                        } ]
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Testing Ramp Post-Apartheid LQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Demographic_Coverage": 1,
+                "Include_Arrivals": 0,
+                "Include_Departures": 0,
+                "Number_Distributions": -1,
+                "Number_Repetitions": 1,
+                "Property_Restrictions": [],
+                "Target_Demographic": "Everyone",
+                "Timesteps_Between_Repetitions": -1,
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIVScaleUpSwitch",
+                    "Trigger_Condition": "ProviderOrdersTBTest",
+                    "Demographic_Coverage": 1,
+                    "Duration": 3530,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Demographic_Coverage_Time_Profile": "Linear",
+                    "Initial_Demographic_Coverage": 0,
+                    "Primary_Time_Constant": 3530,
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "DiagnosticTreatNegSmearPlusMinus",
+                        "Base_Sensitivity": 1,
+                        "Base_Specificity": 1,
+                        "Base_Sensitivity_Smear_Neg": 0.38,
+                        "Base_Specificity_Smear_Neg": 1,
+                        "Cost_To_Consumer": 1,
+                        "Days_To_Diagnosis": 0,
+                        "Treatment_Fraction": 0.59999999999999998,
+                        "Positive_Diagnosis_Config_Event": "ProviderOrdersMDRTestPreXPERT",
+                        "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                        "Defaulters_Config_Event": "TBTestDefault"
+                    },
+                    "Not_Covered_IndividualIntervention_Configs": [ 
+                        { 
+                            "class": "DiagnosticTreatNegSmearPlusMinus",
+                            "Base_Sensitivity": 1,
+                            "Base_Specificity": 1,
+                            "Base_Sensitivity_Smear_Neg": 0.38,
+                            "Base_Specificity_Smear_Neg": 1,
+                            "Cost_To_Consumer": 1,
+                            "Days_To_Diagnosis": 0,
+                            "Treatment_Fraction": 0.20000000000000001,
+                            "Positive_Diagnosis_Config_Event": "ProviderOrdersMDRTestPreXPERT",
+                            "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                            "Defaulters_Config_Event": "TBTestDefault"
+                        } ]
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Transition XPERT LQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 48790,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Demographic_Coverage": 1,
+                "Include_Arrivals": 0,
+                "Include_Departures": 0,
+                "Number_Distributions": -1,
+                "Number_Repetitions": 1,
+                "Property_Restrictions": [],
+                "Target_Demographic": "Everyone",
+                "Timesteps_Between_Repetitions": -1,
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIVScaleUpSwitch",
+                    "Trigger_Condition": "ProviderOrdersTBTest",
+                    "Demographic_Coverage": 1,
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Demographic_Coverage_Time_Profile": "Linear",
+                    "Initial_Demographic_Coverage": 0,
+                    "Primary_Time_Constant": 1215,
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "DiagnosticTreatNegSmearPlusMinus",
+                        "Base_Sensitivity": 0.97999999999999998,
+                        "Base_Specificity": 1,
+                        "Base_Sensitivity_Smear_Neg": 0.79000000000000004,
+                        "Base_Specificity_Smear_Neg": 1,
+                        "Cost_To_Consumer": 1,
+                        "Days_To_Diagnosis": 0,
+                        "Treatment_Fraction": 0.59999999999999998,
+                        "Positive_Diagnosis_Config_Event": "ProviderOrdersMDRTest",
+                        "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                        "Defaulters_Config_Event": "TBTestDefault"
+                    },
+                    "Not_Covered_IndividualIntervention_Configs": [ 
+                        { 
+                            "class": "DiagnosticTreatNegSmearPlusMinus",
+                            "Base_Sensitivity": 1,
+                            "Base_Specificity": 1,
+                            "Base_Sensitivity_Smear_Neg": 0.38,
+                            "Base_Specificity_Smear_Neg": 1,
+                            "Cost_To_Consumer": 1,
+                            "Days_To_Diagnosis": 0,
+                            "Treatment_Fraction": 0.59999999999999998,
+                            "Positive_Diagnosis_Config_Event": "ProviderOrdersMDRTestPreXPERT",
+                            "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                            "Defaulters_Config_Event": "TBTestDefault"
+                        } ]
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Transition XPERT HQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 48790,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Demographic_Coverage": 1,
+                "Include_Arrivals": 0,
+                "Include_Departures": 0,
+                "Number_Distributions": -1,
+                "Number_Repetitions": 1,
+                "Property_Restrictions": [],
+                "Target_Demographic": "Everyone",
+                "Timesteps_Between_Repetitions": -1,
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIVScaleUpSwitch",
+                    "Trigger_Condition": "ProviderOrdersTBTest",
+                    "Demographic_Coverage": 1,
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Demographic_Coverage_Time_Profile": "Linear",
+                    "Initial_Demographic_Coverage": 0,
+                    "Primary_Time_Constant": 1215,
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "DiagnosticTreatNegSmearPlusMinus",
+                        "Base_Sensitivity": 0.97999999999999998,
+                        "Base_Specificity": 1,
+                        "Base_Sensitivity_Smear_Neg": 0.79000000000000004,
+                        "Base_Specificity_Smear_Neg": 1,
+                        "Cost_To_Consumer": 1,
+                        "Days_To_Diagnosis": 0,
+                        "Treatment_Fraction": 0.82999999999999996,
+                        "Positive_Diagnosis_Config_Event": "ProviderOrdersMDRTest",
+                        "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                        "Defaulters_Config_Event": "TBTestDefault"
+                    },
+                    "Not_Covered_IndividualIntervention_Configs": [ 
+                        { 
+                            "class": "DiagnosticTreatNegSmearPlusMinus",
+                            "Base_Sensitivity": 1,
+                            "Base_Specificity": 1,
+                            "Base_Sensitivity_Smear_Neg": 0.38,
+                            "Base_Specificity_Smear_Neg": 1,
+                            "Cost_To_Consumer": 1,
+                            "Days_To_Diagnosis": 0,
+                            "Treatment_Fraction": 0.82999999999999996,
+                            "Positive_Diagnosis_Config_Event": "ProviderOrdersMDRTestPreXPERT",
+                            "Negative_Diagnosis_Config_Event": "TBTestNegative",
+                            "Defaulters_Config_Event": "TBTestDefault"
+                        } ]
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "MDR XPERT HQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 48790,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Demographic_Coverage": 1,
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Trigger_Condition": "ProviderOrdersMDRTest",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "MDRDiagnostic",
+                        "Base_Sensitivity": 0.90000000000000002,
+                        "Base_Specificity": 1,
+                        "Cost_To_Consumer": 1,
+                        "Days_To_Diagnosis": 0,
+                        "Treatment_Fraction_Negative_Diagnosis": 1,
+                        "Treatment_Fraction": 0.69999999999999996,
+                        "Positive_Diagnosis_Config_Event": "TBMDRTestPositive",
+                        "Negative_Diagnosis_Config_Event": "TBMDRTestNegative",
+                        "Defaulters_Config_Event": "TBMDRTestDefault"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "MDR XPERT LQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 48790,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Demographic_Coverage": 1,
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Trigger_Condition": "ProviderOrdersMDRTest",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "MDRDiagnostic",
+                        "Base_Sensitivity": 0.90000000000000002,
+                        "Base_Specificity": 1,
+                        "Cost_To_Consumer": 1,
+                        "Days_To_Diagnosis": 0,
+                        "Treatment_Fraction": 0.69999999999999996,
+                        "Treatment_Fraction_Negative_Diagnosis": 1,
+                        "Positive_Diagnosis_Config_Event": "TBMDRTestPositive",
+                        "Negative_Diagnosis_Config_Event": "TBMDRTestNegative",
+                        "Defaulters_Config_Event": "TBMDRTestDefault"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "MDR Return after Default LQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 48790,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Trigger_Condition": "TBMDRTestDefault",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0027399999999999998,
+                        "Actual_IndividualIntervention_Config_Event": "ProviderOrdersMDRTest"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "MDR Return after Default HQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 48790,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Trigger_Condition": "TBMDRTestDefault",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleHealthSeekingBehavior",
+                        "Tendency": 0.0055999999999999999,
+                        "Actual_IndividualIntervention_Config_Event": "ProviderOrdersMDRTest"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "MDR PREXPERT HQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Demographic_Coverage": 1,
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:High" ],
+                    "Trigger_Condition": "ProviderOrdersMDRTestPreXPERT",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "MDRDiagnostic",
+                        "Base_Sensitivity": 0.98999999999999999,
+                        "Base_Specificity": 1,
+                        "Cost_To_Consumer": 1,
+                        "Days_To_Diagnosis": 0,
+                        "Treatment_Fraction_Negative_Diagnosis": 1,
+                        "Treatment_Fraction": 0.59999999999999998,
+                        "Positive_Diagnosis_Config_Event": "TBMDRTestPositive",
+                        "Negative_Diagnosis_Config_Event": "TBMDRTestNegative",
+                        "Defaulters_Config_Event": "TBTestDefault"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "MDR PREXPERT LQ",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 45260,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Demographic_Coverage": 1,
+                    "Duration": -1,
+                    "Property_Restrictions_Within_Node": [ "Care_Quality:Low" ],
+                    "Trigger_Condition": "ProviderOrdersMDRTestPreXPERT",
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "MDRDiagnostic",
+                        "Base_Sensitivity": 0.98999999999999999,
+                        "Base_Specificity": 1,
+                        "Cost_To_Consumer": 1,
+                        "Days_To_Diagnosis": 0,
+                        "Treatment_Fraction": 0.40000000000000002,
+                        "Treatment_Fraction_Negative_Diagnosis": 1,
+                        "Positive_Diagnosis_Config_Event": "TBMDRTestPositive",
+                        "Negative_Diagnosis_Config_Event": "TBMDRTestNegative",
+                        "Defaulters_Config_Event": "TBTestDefault"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Join mining community and revert",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 1,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Property_Restrictions_Within_Node": [ "Mine_Status:General_Community" ],
+                    "Duration": -1,
+                    "Trigger_Condition": "Births",
+                    "Demographic_Coverage": 0.31,
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "IVCalendar",
+                        "Dropout": 0,
+                        "Absolute_Expire_Time": 70000,
+                        "Actual_IndividualIntervention_Configs": [ 
+                            { 
+                                "class": "PropertyChanger",
+                                "Daily_Probability": 1,
+                                "Revert": 1,
+                                "Reversion_Rate": 8.6300999999999999e-05,
+                                "Maximum_Duration": -1,
+                                "Target_Property_Key": "Mine_Status",
+                                "Target_Property_Value": "Mining_Community"
+                            } ],
+                        "Calendar": [ 
+                            { 
+                                "Age": 7300,
+                                "Probability": 0.80000000000000004
+                            }, 
+                            { 
+                                "Age": 11315,
+                                "Probability": 0.80000000000000004
+                            }, 
+                            { 
+                                "Age": 14965,
+                                "Probability": 0.5
+                            }, 
+                            { 
+                                "Age": 18250,
+                                "Probability": 0.5
+                            } ]
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "remove mines",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 7300,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Target_Demographic": "Everyone",
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": -1,
+                    "Trigger_Condition": "Births",
+                    "Property_Restrictions_Within_Node": [ "Mine_Status:Mining_Community" ],
+                    "Demographic_Coverage": 1,
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "PropertyChanger",
+                        "Daily_Probability": 1,
+                        "Revert": 0,
+                        "Reversion_Rate": 8.6300999999999999e-05,
+                        "Maximum_Duration": -1,
+                        "Target_Property_Key": "Mine_Status",
+                        "Target_Property_Value": "General_Community"
+                    }
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Transmission Blocking Vaccine",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 48910,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Demographic_Coverage": 1,
+                "Number_Distributions": -1,
+                "Number_Repetitions": 2,
+                "Target_Group": "Everyone",
+                "Property_Restrictions": [],
+                "Timesteps_Between_Repetitions": 6,
+                "Intervention_Config": 
+                { 
+                    "class": "SimpleVaccine",
+                    "Vaccine_Take": 1,
+                    "Durability_Time_Profile": "BOXDURABILITY",
+                    "Primary_Decay_Time_Constant": 36500,
+                    "Reduced_Acquire": 0,
+                    "Reduced_Transmit": 1,
+                    "Vaccine_Type": "TransmissionBlocking"
+                }
+            }
+        }, 
+        { 
+            "Event_Name": "Transmission Blocking Vaccine Birth Trigger",
+            "class": "CampaignEvent",
+            "Nodeset_Config": 
+            { 
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 48910,
+            "Event_Coordinator_Config": 
+            { 
+                "class": "StandardInterventionDistributionEventCoordinator",
+                "Demographic_Coverage": 1,
+                "Number_Distributions": -1,
+                "Number_Repetitions": 1,
+                "Target_Group": "Everyone",
+                "Property_Restrictions": [],
+                "Timesteps_Between_Repetitions": 1,
+                "Intervention_Config": 
+                { 
+                    "class": "NodeLevelHealthTriggeredIV",
+                    "Duration": -1,
+                    "Trigger_Condition": "Births",
+                    "Property_Restrictions_Within_Node": [],
+                    "Demographic_Coverage": 1,
+                    "Actual_IndividualIntervention_Config": 
+                    { 
+                        "class": "SimpleVaccine",
+                        "Vaccine_Take": 1,
+                        "Durability_Time_Profile": "BOXDURABILITY",
+                        "Primary_Decay_Time_Constant": 36500,
+                        "Reduced_Acquire": 0,
+                        "Reduced_Transmit": 1,
+                        "Vaccine_Type": "TransmissionBlocking"
+                    }
+                }
+            }
+        } ]
+}
