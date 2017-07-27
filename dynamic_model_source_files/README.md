@@ -7,7 +7,7 @@ Files required to perform simulations in the manuscript "The contribution of gol
 * Diff_Mining_TRAVEL_MINES_ALL_SA1.json
 * SA_working_demog.json
 
-Also included is the executable and dynamically linked library required to run the simulations and produce output: 
+Also included is the Windows executable and dynamically linked library required to run the simulations and produce output: 
 
 * Eradication_mines_exog_vaccine.exe
 * lib_custom_tb_reporter_tbmines.dll
