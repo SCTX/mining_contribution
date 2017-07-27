@@ -12,4 +12,4 @@ Also included is the executable and dynamically linked library required to run t
 ⋅⋅* Eradication_mines_exog_vaccine.exe
 ⋅⋅* lib_custom_tb_reporter_tbmines.dll
 
-Additional information can be found at the Institute for Disease Modeling [website](https://www.idmod.org)
+Additional information can be found at the [Institute for Disease Modeling website](http://idmod.org/documentation).
